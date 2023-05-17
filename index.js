@@ -1,4 +1,5 @@
 const express = require('express');
+const cookieParser = require('cookie-parser');
 const app = express();
 const port = 8000;
 const expressLayouts = require('express-ejs-layouts');  //requireing the layouts 
@@ -6,9 +7,10 @@ const expressLayouts = require('express-ejs-layouts');  //requireing the layouts
 
 const db = require('./config/mongoose');
 
+//reading through the post request to read the data and information from the form
+app.use(express.urlencoded());
 
-
-
+app.use(cookieParser());
 
 //Layouts
 app.use(express.static('./assets'));
