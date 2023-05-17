@@ -1,22 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+
     <title><%= title%></title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
+    
+    <!-- addes css file from assets/css/layouts-->
+    <link rel='stylesheet' type='text/css' media='screen' href='/css/layout.css'>  
+
+    <!-- extract styles from sub pages into the layout -->
+    <%- style %>
+   
+
+
 </head>
 <body>
 
     <%- include('_header'); %>
-   
-    
+
     <%- body %>
 
     
     <%- include('_footer'); %>
 
+    <%- script %>
+
 </body>
+
 </html>
