@@ -13,7 +13,7 @@ router.get('/sign-up', userscontroller.signUp);
 router.get('/sign-in', userscontroller.signIn);
 
 router.post('/create', userscontroller.create); //form for user sign is posting the data so method should be same
-
+router.post('/create-session', userscontroller.createSession);
 
 
 module.exports =router;
